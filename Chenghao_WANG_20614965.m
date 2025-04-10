@@ -72,6 +72,7 @@ fprintf(fid, '\nData logging terminated\n');
 
 fclose(fid);
 
+
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
 
 temp_monitor(a,duration)
@@ -84,4 +85,26 @@ temp_prediction(a,duration)
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
 
-% Insert answers here
+% CHALLENGES: Implementing this temperature monitoring system presented several technical challenges.
+% Synchronizing real-time data acquisition with LED control while maintaining precise 1-second intervals.
+% Debugging the physical circuit connections, proved time-consuming but educational.
+%
+% STRENGTHS: The system's key strength lies in its modular design, separating core functionalities into distinct, well-documented functions.
+% The implementation provides comprehensive real-time feedback through both visual (LEDs) and textual (command window) outputs.
+% The live plot effectively visualizes temperature trends, while the log file creation provides persistent data storage.
+%
+% LIMITATIONS: Current limitations include the assumption of linear temperature changes for predictions, which may not hold true in all scenarios.
+% The system lacks hysteresis in its alert thresholds, potentially causing rapid LED toggling near boundary conditions.
+% The fixed 1-second sampling interval doesn't adapt to changing conditions. Sensor calibration drift over time isn't accounted for,
+% and the system has no capability for automated temperature correction, only monitoring.
+%
+% FUTURE IMPROVEMENTS:
+% Implementing PID control to actively regulate temperature rather than just monitor it.
+% Adding audible alarms alongside visual indicators.
+% Incorporating humidity sensing for more comprehensive comfort monitoring.
+% Implementing adaptive sampling rates that increase during rapid temperature changes.
+% Adding hysteresis to alert thresholds to prevent flickering.
+% Including self-calibration routines to maintain sensor accuracy. 
+%
+% This project significantly enhanced my skills in real-time system design, hardware-software integration, and MATLAB programming.
+% The experience of developing a complete functional prototype from sensor input to actionable outputs provided valuable insights into embedded systems development challenges and solutions.
